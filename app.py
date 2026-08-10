@@ -10,7 +10,7 @@ from matcher import find_soa_file
 # Configure the visual layout of the web page
 st.set_page_config(page_title="SOA Reconciler", page_icon="📊", layout="centered")
 
-st.title("📊 SOA Reconciliation Pipeline")
+st.title(" SOA Reconciliation Pipeline")
 st.markdown("Automate weekly billing charges directly into partner SOA files and generate a processed summary report.")
 st.divider()
 
@@ -44,7 +44,7 @@ if submitted:
     # 1. Pre-flight Validation
     if not report_path.is_file():
         st.error(f"Cannot find the billing sheet at: {report_path}")
-        st.info("💡 Tip: Ensure the file name matches exactly, and isn't named 'Report (1).xlsx' or 'Report.xlsx.xlsx'")
+        st.info("Tip: Ensure the file name matches exactly, and isn't named 'Report (1).xlsx' or 'Report.xlsx.xlsx'")
         st.stop()
         
     if not soa_dir.is_dir():
@@ -121,8 +121,8 @@ if submitted:
     if status_updates:
         try:
             update_summary_report(report_path, status_updates)
-            add_log("✅ Summary report duplicated and updated with status tracking.")
+            add_log(" Summary report duplicated and updated with status tracking.")
         except Exception as e:
-            add_log(f"❌ Failed to update summary report: {e}")
+            add_log(f" Failed to update summary report: {e}")
             
     st.success("Run cycle finished successfully! Check the new PROCESSED summary file.")
