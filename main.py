@@ -1,3 +1,4 @@
+# Use this file to run directly from the terminal, you would have to input the file path in respective lines 14 & 15.
 """Main orchestrator for the SOA financial reconciliation pipeline."""
 
 import logging
@@ -10,10 +11,10 @@ logging.basicConfig(level=logging.INFO, format='%(levelname)s: %(message)s')
 logger = logging.getLogger(__name__)
 
 # --- CONFIGURATION ---
-REPORT_FILE_PATH = "/Users/sus_/Desktop/aiwo_project/406_Termination Report 20JUL2026 to 26JUL2026.xlsx" 
-SOA_DIRECTORY_PATH = "Target_SOAs" 
-BILLING_START_DATE = "20-Jul-2026"
-BILLING_END_DATE = "26-Jul-2026"
+REPORT_FILE_PATH = " " 
+SOA_DIRECTORY_PATH = " " 
+BILLING_START_DATE = " "
+BILLING_END_DATE = " "
 # ---------------------
 
 def main():
