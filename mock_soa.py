@@ -26,8 +26,8 @@ def generate_varied_mocks():
         "Jaisotel Limited - DO0620"
     ]
 
-    template_path = Path("Betacals Telecom & Aiwo SOA.xlsx")
-    output_dir = Path("Target_SOAs")
+    template_path = Path(" ")# Enter a file name here present in your directory for refrence of the mock SOAs
+    output_dir = Path(" ")
     
     # Reset the directory for a clean slate
     if output_dir.exists():
@@ -35,7 +35,7 @@ def generate_varied_mocks():
     output_dir.mkdir()
     
     if not template_path.exists():
-        print(f"❌ Error: Template '{template_path.name}' not found.")
+        print(f" Error: Template '{template_path.name}' not found.")
         return
 
     print(f"Generating varied mock SOAs in ./{output_dir.name}/ ...\n")
@@ -110,12 +110,12 @@ def generate_varied_mocks():
                     safe_write(current_row, 14, "*unbilled")
                     
             wb.save(new_filepath)
-            print(f"✅ Generated: {new_filename} ({num_history_rows} past records)")
+            print(f" Generated: {new_filename} ({num_history_rows} past records)")
             
         except Exception as e:
-            print(f"⚠️ Failed to update {new_filename}: {e}")
+            print(f" Failed to update {new_filename}: {e}")
 
-    print("\n🎉 Varied mock generation complete!")
+    print("\n Varied mock generation complete!")
 
 if __name__ == "__main__":
     generate_varied_mocks()
