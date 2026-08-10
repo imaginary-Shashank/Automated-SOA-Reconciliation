@@ -85,7 +85,7 @@ def update_soa_file(soa_path: Path, charge: TerminationCharge, start_date: str, 
     
     # Save the file
     wb.save(soa_path)
-    logger.info(f"✅ Successfully wrote ${charge.amount} to {soa_path.name}")
+    logger.info(f" Successfully wrote ${charge.amount} to {soa_path.name}")
 
 def update_summary_report(report_path: Path | str, updates: list[tuple[int, str, int]]):
     """
@@ -116,4 +116,4 @@ def update_summary_report(report_path: Path | str, updates: list[tuple[int, str,
     # Save as a NEW file so the original source remains untouched
     new_path = path.parent / f"{path.stem}_PROCESSED{path.suffix}"
     wb.save(new_path)
-    logger.info(f"✅ Processed report saved safely as: {new_path.name}")
+    logger.info(f" Processed report saved safely as: {new_path.name}")
