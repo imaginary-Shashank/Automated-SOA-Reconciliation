@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+.DS_Store
+build/
+dist/
+*.spec
+Target_SOAs/
+406_Termination Report 20JUL2026 to 26JUL2026.xlsx
+406_Termination Report 20JUL2026 to 26JUL2026_PROCESSED.xlsx
+Betacals Telecom & Aiwo SOA.xlsx
